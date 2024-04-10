@@ -9,17 +9,17 @@ class PageController extends Controller
 {
     public function index(): View
     {
-        return view("notes/index");
+        return view("pages/list");
     }
 
     public function create(): View
     {
-        return view("notes/new");
+        return view("pages/new");
     }
 
     public function edit($id): View
     {
-        return view("notes/edit", [
+        return view("pages/edit", [
             "id" => $id,
         ]);
     }
