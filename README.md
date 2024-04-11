@@ -43,3 +43,6 @@ php artisan migrate
 php artisan serve
 npm run dev
 ```
+
+### пример работы
+[s123-2024-04-11_16.35.08.webm](https://github.com/webPrsnr/f5-crud/assets/87827046/edcc00ab-3708-495e-a269-ba3a59557d94)
