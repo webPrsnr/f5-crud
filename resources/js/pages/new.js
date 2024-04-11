@@ -1,3 +1,4 @@
+import toastStorage from '../utils/localstorage'
 import { getConfigureRules, getSerializedData } from '../utils/validation'
 
 $(() => {
@@ -12,6 +13,10 @@ $(() => {
         data,
         success() {
           window.location = config.api.list
+          toastStorage.setToastInfo({
+            title: 'Заметка успешно создана',
+            status: 'success',
+          })
         },
       })
     },
