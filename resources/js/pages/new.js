@@ -1,5 +1,6 @@
 import toastStorage from '../utils/localstorage'
 import { getConfigureRules, getSerializedData } from '../utils/validation'
+import route from '../utils/route'
 
 $(() => {
   $('#todos').validate({
@@ -12,7 +13,7 @@ $(() => {
         url: `${import.meta.env.VITE_API_URL}/create`,
         data,
         success() {
-          window.location = config.api.list
+          route.to(config.api.list)
           toastStorage.setToastInfo({
             title: 'Заметка успешно создана',
             status: 'success',

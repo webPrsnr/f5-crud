@@ -1,6 +1,7 @@
 import { getConfigureRules, getSerializedData } from '../utils/validation'
 import toastStorage from '../utils/localstorage'
 import loader from '../utils/loader'
+import route from '../utils/route'
 
 $(() => {
   $.ajax({
@@ -26,7 +27,7 @@ $(() => {
         url: `${import.meta.env.VITE_API_URL}/${config.id}/edit`,
         data,
         success() {
-          window.location = config.api.list
+          route.to(config.api.list)
           toastStorage.setToastInfo({
             title: 'Заметка успешно изменена',
             status: 'success',
@@ -42,7 +43,7 @@ $('#editDelete').on('click', () => {
     method: 'DELETE',
     url: `${import.meta.env.VITE_API_URL}/${config.id}`,
     success() {
-      window.location = config.api.list
+      route.to(config.api.list)
       toastStorage.setToastInfo({
         title: 'Заметка успешно удалена',
         status: 'success',

@@ -1,4 +1,5 @@
 import loader from '../utils/loader'
+import route from '../utils/route'
 
 $(() => {
   $.ajax({
@@ -11,6 +12,12 @@ $(() => {
     renderTemplate(msg)
     loader.stopLoader()
   })
+})
+
+$(document).on('click', 'button', function () {
+  const url = this.dataset.route
+  if (url)
+    route.to(url)
 })
 
 function renderTemplate(msg) {
