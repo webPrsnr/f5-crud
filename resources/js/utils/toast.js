@@ -6,7 +6,7 @@ export default function showToast() {
   if (config) {
     Toastify({
       text: config.title,
-      duration: 2000,
+      duration: 800,
       newWindow: true,
       gravity: 'bottom',
       position: 'right',
