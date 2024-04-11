@@ -1,9 +1,15 @@
+import loader from '../utils/loader'
+
 $(() => {
   $.ajax({
     method: 'GET',
     url: import.meta.env.VITE_API_URL,
+    beforeSend: () => {
+      loader.startLoader()
+    },
   }).done((msg) => {
     renderTemplate(msg)
+    loader.stopLoader()
   })
 })
 

@@ -1,12 +1,17 @@
 import { getConfigureRules, getSerializedData } from '../utils/validation'
 import toastStorage from '../utils/localstorage'
+import loader from '../utils/loader'
 
 $(() => {
   $.ajax({
     method: 'GET',
     url: `${import.meta.env.VITE_API_URL}/${config.id}`,
+    beforeSend: () => {
+      loader.startLoader()
+    },
   }).done((msg) => {
     insertDefaultValues(msg)
+    loader.stopLoader()
   })
 })
 
