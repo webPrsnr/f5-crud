@@ -3,9 +3,10 @@
 
 <div class="h-screen w-full">
     <div class="container h-100 w-full flex items-center justify-center ">
-        <div class="relative rounded-xl border bg-card text-card-foreground shadow p-6 m-4  w-full lg:w-3/4">
+        <div class="relative rounded-xl border bg-card text-card-foreground shadow p-6 m-4 w-full lg:w-3/4">
         <div id="loaderBackground" class="absolute w-full h-full top-0 left-0 bg-slate-50 opacity-80 hidden"></div>
         <div id="loaderSpinner" class="border-gray-300 h-20 w-20 animate-spin rounded-full border-8 border-t-primary absolute inset-0 m-auto hidden"></div>
+        <p id="noteSuggestion" class="absolute inset-24 m-auto hidden items-center justify-center text-muted-foreground">Список пуст, пожалуйста добавьте новую заметку</p>
             <div class="mb-4">
                 <h1 class="text-4xl text-center">Список заметок</h1>
             </div>

@@ -9,6 +9,11 @@ $(() => {
       loader.startLoader()
     },
   }).done((msg) => {
+    if (!msg.length) {
+      $('#noteSuggestion').css('display', 'flex')
+      loader.stopLoader()
+      return
+    }
     renderTemplate(msg)
     loader.stopLoader()
   })
